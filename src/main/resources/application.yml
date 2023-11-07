@@ -1,0 +1,19 @@
+server:
+  port: ${PORT:8080}
+  servlet:
+    context-path: /gca-technologies
+
+spring:
+  jpa:
+    propieties:
+      hibernate:
+        dialect: org.hibernate.dialect.Oracle12cDialect
+    hibernate:
+      ddl-auto: none
+    show-sql: 'true'
+
+datasource:
+  url: ${URL_DB:jdbc:oracle:thin:@//db-gca-oracle.c8bhg15evstq.us-east-1.rds.amazonaws.com:1521/DBGCA}
+  user: ${USERNAME_DB:admin}
+  password: ${PASSWORD_DB:admingca}
+  drive: ${DRIVE:oracle.jdbc.OracleDriver}
